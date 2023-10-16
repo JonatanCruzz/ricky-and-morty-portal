@@ -1,4 +1,3 @@
-import { IconSearch } from '@tabler/icons-react';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import CustomMenuSelect from './CustomMenuSelect';
@@ -40,21 +39,15 @@ const Location = ({ location, setLocation }) => {
 
     return (
         <section>
-            <div className="form-container mb-10 text-white">
+            <div className="form-container mb-10 ">
                 <form className="flex">
                     <CustomMenuSelect
-                        
+
                         suggestions={suggestions}
                         inputValue={inputValue}
                         handleInputChange={handleInputChange}
                         handleLocationChange={handleLocationChange}
                     />
-                    <button
-                        type="submit"
-                        className="flex items-center border-2 border-[#7ee57c] rounded-r-md bg-[#4a8549] hover:bg-[#1a2f1a] p-1 pl-2 pr-2 gap-2 cursor-pointer"
-                    >
-                        <span className="md:flex sm:hidden">Search</span> <IconSearch size={18} />
-                    </button>
                 </form>
             </div>
 

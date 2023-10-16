@@ -18,17 +18,16 @@ const CustomMenuSelect = ({ suggestions, inputValue, handleInputChange, handleLo
         }),
         select: (provided) => ({
             ...provided,
-            color: 'white',
             fontSize: '16px',
         }),
         menu: (provided) => ({
             ...provided,
             backgroundColor: 'transparent',
+            color: 'white',
         }),
         option: (provided) => ({
             ...provided,
             backgroundColor: '#2b3c2b',
-            color: 'white',
         }),
     };
 
@@ -40,7 +39,8 @@ const CustomMenuSelect = ({ suggestions, inputValue, handleInputChange, handleLo
             onChange={handleLocationChange}
             placeholder="Type a location name"
             styles={customSelectStyles}
-            className="border-2 border-[#7ee57c] bg-transparent rounded-l-md w-96 p-1 sm:p-2 sm:text-sm"
+            isSearchable={false}
+            className=" border-2 border-[#7ee57c] bg-transparent rounded-l-md w-96 p-1 sm:p-2 sm:text-sm"
         />
     )
 }
